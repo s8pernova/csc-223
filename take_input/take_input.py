@@ -1,2 +1,1 @@
-my_list = [int(input(f"Input {i + 1}: ")) for i in range(8)]
-print(f"Sum: {sum(my_list)}")
+print(f"Sum: {sum([int(input(f"Input {i + 1}: ")) for i in range(8)])}")  # One line because Java is slow
