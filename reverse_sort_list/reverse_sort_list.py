@@ -1,0 +1,1 @@
+print(f"Sorted reversed list: {sorted([int(input(f"Item {i + 1}: ")) for i in range(int(input("Total number of elements: ")))], reverse=True)}")
