@@ -1,10 +1,7 @@
 """
 Assignment Instructions
 
-Goal
-- Translate the provided Java OOP assignment into Python.
-
-Classes to implement
+Goal: Create two classes to implement
 
 1) Course (base class)
 - Private fields:
@@ -88,54 +85,52 @@ Course Information:
 
 class Course:
     def __init__(self):
-        self.__course_number = ""
-        self.__course_title = ""
+        self.courseNumber: str = ""
+        self.courseTitle: str = ""
 
-    def setCourseNumber(self, course_number: str) -> None:
-        self.__course_number = course_number
+    def setCourseNumber(self, x):
+        self.courseNumber = x
 
-    def getCourseNumber(self) -> str:
-        return self.__course_number
+    def setCourseTitle(self, x):
+        self.courseTitle = x
 
-    def setCourseTitle(self, course_title: str) -> None:
-        self.__course_title = course_title
-
-    def getCourseTitle(self) -> str:
-        return self.__course_title
-
-    def printInfo(self) -> None:
+    def printInfo(self):
         print("Course Information:")
-        print(f"   Course Number: {self.__course_number}")
-        print(f"   Course Title: {self.__course_title}")
+        print(f"   Course Number: {self.courseNumber}")
+        print(f"   Course Title: {self.courseTitle}")
 
-
-class OfferedCourse(Course):
+class OfferedCourse:
     def __init__(self):
-        super().__init__()
-        self.__instructor_name = ""
-        self.__location = ""
-        self.__class_time = ""
+        self.courseNumber: str = ""
+        self.courseTitle: str = ""
+        self.instructorName: str = ""
+        self.location: str = ""
+        self.classTime: str = ""
 
-    def setInstructorName(self, instructor_name: str) -> None:
-        self.__instructor_name = instructor_name
+    def setCourseNumber(self, x):
+        self.courseNumber = x
+    
+    def setCourseTitle(self, x):
+        self.courseTitle = x
+    
+    def setInstructorName(self, x):
+        self.instructorName = x
+    
+    def setLocation(self, x):
+        self.location = x
+    
+    def setClassTime(self, x):
+        self.classTime = x
+    
+    def printInfo(self):
+        print("Course Information:")
+        print(f"   Course Number: {self.courseNumber}")
+        print(f"   Course Title: {self.courseTitle}")
+        print(f"   Instructor Name: {self.instructorName}")
+        print(f"   Location: {self.location}")
+        print(f"   Class Time: {self.classTime}")
 
-    def getInstructorName(self) -> str:
-        return self.__instructor_name
-
-    def setLocation(self, location: str) -> None:
-        self.__location = location
-
-    def getLocation(self) -> str:
-        return self.__location
-
-    def setClassTime(self, class_time: str) -> None:
-        self.__class_time = class_time
-
-    def getClassTime(self) -> str:
-        return self.__class_time
-
-
-def main() -> None:
+def main():
     myCourse = Course()
     myOfferedCourse = OfferedCourse()
 
@@ -159,9 +154,9 @@ def main() -> None:
     myOfferedCourse.setClassTime(classTime)
     myOfferedCourse.printInfo()
 
-    print(f"   Instructor Name: {myOfferedCourse.getInstructorName()}")
-    print(f"   Location: {myOfferedCourse.getLocation()}")
-    print(f"   Class Time: {myOfferedCourse.getClassTime()}")
+    print("   Instructor Name: " + myOfferedCourse.getInstructorName())
+    print("   Location: " + myOfferedCourse.getLocation())
+    print("   Class Time: " + myOfferedCourse.getClassTime())
 
 
 if __name__ == "__main__":
