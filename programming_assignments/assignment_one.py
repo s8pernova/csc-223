@@ -94,25 +94,24 @@ class Course:
     def setCourseTitle(self, x):
         self.courseTitle = x
 
+    def getCourseNumber(self):
+        return self.courseNumber
+
+    def getCourseTitle(self):
+        return self.courseTitle
+
     def printInfo(self):
         print("Course Information:")
         print(f"   Course Number: {self.courseNumber}")
         print(f"   Course Title: {self.courseTitle}")
 
-class OfferedCourse:
+class OfferedCourse(Course):
     def __init__(self):
-        self.courseNumber: str = ""
-        self.courseTitle: str = ""
+        super().__init__()
         self.instructorName: str = ""
         self.location: str = ""
         self.classTime: str = ""
 
-    def setCourseNumber(self, x):
-        self.courseNumber = x
-    
-    def setCourseTitle(self, x):
-        self.courseTitle = x
-    
     def setInstructorName(self, x):
         self.instructorName = x
     
@@ -122,13 +121,15 @@ class OfferedCourse:
     def setClassTime(self, x):
         self.classTime = x
     
-    def printInfo(self):
-        print("Course Information:")
-        print(f"   Course Number: {self.courseNumber}")
-        print(f"   Course Title: {self.courseTitle}")
-        print(f"   Instructor Name: {self.instructorName}")
-        print(f"   Location: {self.location}")
-        print(f"   Class Time: {self.classTime}")
+    def getInstructorName(self):
+        return self.instructorName
+
+    def getLocation(self):
+        return self.location
+
+    def getClassTime(self):
+        return self.classTime
+
 
 def main():
     myCourse = Course()
