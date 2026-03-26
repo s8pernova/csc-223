@@ -1,4 +1,4 @@
-package queues;
+package ParenthesisChecker;
 
 import java.util.Scanner;
 import java.util.Stack;
