@@ -26,10 +26,10 @@ def unique_random_ints(how_many, max_num):
     #       - increase retries by 1
 
     while len(nums) < how_many:
-        num = random.randint(0, max_num - 1)
+        num = rand_gen.randrange(max_num)
 
         if num in already_seen:
-            retries =+ 1
+            retries += 1
             continue
 
         nums.append(num)
